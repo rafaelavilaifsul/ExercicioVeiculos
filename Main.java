@@ -10,13 +10,19 @@ public class Main {
         for (int i = 0; i < v.length; i++) {
             System.out.printf("Qual o tipo do %do veículo? (1 = carro, 2 = caminhão): ", i + 1);
             int resp = teclado.nextInt();
+            teclado.nextLine();
+            System.out.print("Qual a marca: ");
+            String marca = teclado.nextLine();
+            System.out.print("Qual o modelo: ");
+            String modelo = teclado.nextLine();
             if (resp == 1) {
-                v[i] = new Carro();
+                v[i] = new Carro(marca, modelo);
             } else {
-                v[i] = new Caminhao();
+                v[i] = new Caminhao(marca, modelo);
             }
         }
         for (int i = 0; i < v.length; i++) {
+            System.out.println(v[i]);
             v[i].buzine();
         }
     }
