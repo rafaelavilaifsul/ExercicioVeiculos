@@ -1,4 +1,6 @@
+import java.util.List;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
@@ -7,7 +9,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        ArrayList<Veiculo> v = new ArrayList<Veiculo>();
+        List<Veiculo> v = new LinkedList<>();
         for (int i = 0; i < 2; i++) {
             System.out.printf("Qual o tipo do %do veículo? (1 = carro, 2 = caminhão): ", i + 1);
             int resp = teclado.nextInt();
